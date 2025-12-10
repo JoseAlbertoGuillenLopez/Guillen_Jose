@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Graphs</title>
+    
+    <style>
+        /* --- Color Palette --- */
+        /* Primary Blue (for title, borders): #4a4ae6 */
+        /* Page Background: #dce1eb (Soft Gray) */
+        /* Container Background: #E6E9F0 (Very Light Gray) */
+        /* Dark Green (Return Button): #16a085 */
+
+        /* General Styles and Reset */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #dce1eb; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Main Container Style (the soft box) */
+        .contenedor-principal {
+            background-color: #E6E9F0;
+            padding: 40px;
+            border-radius: 20px;
+            /* Soft Shadow (Neumorphism effect) */
+            box-shadow: 10px 10px 20px #caced1, 
+                        -10px -10px 20px #ffffff;
+            text-align: center;
+            width: 700px; /* Width for the grid */
+            box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+        }
+
+        /* Main Title */
+        .titulo-principal {
+            font-size: 2.5em;
+            font-weight: 800; 
+            color: #4a4ae6; /* Strong Blue for the title */
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+        
+        /* Graphs Grid Container */
+        .contenedor-graficas {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+            gap: 30px; /* CORRECCIÓN: Aumentado el espacio entre botones */
+            margin-bottom: 40px;
+            justify-items: center; 
+        }
+
+        /* NEW CSS: Ensures the return button container spans all 4 columns */
+        .contenedor-regresar {
+            grid-column: 1 / -1; 
+            /* Se asegura de que el enlace hijo 'a' se estire */
+            width: 100%; 
+            box-sizing: border-box;
+            /* Aquí quitamos el padding para que no se sume al ancho total del grid */
+            padding: 0; 
+        }
+        
+        /* Estilo base para los enlaces de Gráfica */
+        .boton-grafica {
+            /* Propiedades de enlace */
+            display: inline-block;
+            text-decoration: none; 
+            text-align: center;
+            line-height: 1.2; 
+
+            /* Propiedades del botón */
+            padding: 15px 10px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 8px;
+            width: 100%;
+            transition: all 0.2s;
+            color: #4a4ae6; 
+            background-color: transparent; 
+            border: 2px solid #a6b2ed; 
+            
+            /* Sombra y efecto de elevación suave */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05),
+                        -2px -2px 5px rgba(255, 255, 255, 0.7);
+            box-sizing: border-box;
+        }
+
+        .boton-grafica:hover {
+            /* Efecto hover ligero */
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1),
+                        -4px -4px 10px rgba(255, 255, 255, 0.9);
+        }
+
+        /* Estilo para el enlace REGRESAR (Botón inferior) */
+        a.boton-regresar-menu {
+            /* Debe ser 'block' para ocupar todo el ancho */
+            display: block; 
+            text-decoration: none; 
+            text-align: center;
+            
+            padding: 18px 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: white; 
+            cursor: pointer;
+            border: none;
+            border-radius: 12px;
+            width: 100%; /* CORRECCIÓN: Ahora es 100% de su contenedor que ya es el ancho total del grid */
+            transition: transform 0.2s, box-shadow 0.2s;
+            letter-spacing: 0.5px;
+            
+            /* Degradado de Verde Medio a Verde Oscuro */
+            background: linear-gradient(145deg, #1abc9c, #16a085);
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+            box-sizing: border-box; /* Asegura que el padding se incluya en el 100% */
+        }
+        a.boton-regresar-menu:active {
+            transform: scale(0.98);
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), 
+                        inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-principal">
+        <h1 class="titulo-principal">
+            Project GTMC Graphs
+        </h1>
+
+        <div class="contenedor-graficas">
+            <a href="grafica1.html" class="boton-grafica">Graph 1</a>
+            <a href="grafica2.html" class="boton-grafica">Graph 2</a>
+            <a href="grafica3.html" class="boton-grafica">Graph 3</a>
+            <a href="grafica4.html" class="boton-grafica">Graph 4</a>
+            
+            <a href="grafica5.html" class="boton-grafica">Graph 5</a>
+            <a href="grafica6.html" class="boton-grafica">Graph 6</a>
+            <a href="grafica7.html" class="boton-grafica">Graph 7</a>
+            <a href="grafica8.html" class="boton-grafica">Graph 8</a>
+            
+            <a href="grafica9.html" class="boton-grafica">Graph 9</a>
+            <a href="grafica10.html" class="boton-grafica">Graph 10</a>
+            <a href="grafica11.html" class="boton-grafica">Graph 11</a>
+            <a href="grafica12.html" class="boton-grafica">Graph 12</a>
+            
+            <a href="grafica13.html" class="boton-grafica">Graph 13</a>
+            <a href="grafica14.html" class="boton-grafica">Graph 14</a>
+            <a href="grafica15.html" class="boton-grafica">Graph 15</a>
+            
+            <div class="contenedor-regresar">
+                <a href="parcial_3.html" class="boton-regresar-menu">Return to Main Menu</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
